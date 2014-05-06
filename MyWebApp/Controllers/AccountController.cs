@@ -18,6 +18,7 @@ namespace MyWebApp.Controllers
         public AccountController()
             : this(new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext())))
         {
+            retur;
         }
 
         public AccountController(UserManager<ApplicationUser> userManager)
