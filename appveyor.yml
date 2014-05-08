@@ -8,3 +8,13 @@ before_build:
 build:
   verbosity: minimal
   publish_wap: true
+  
+deploy:
+  provider: WebDeploy
+  server: https://waws-prod-bay-003.publish.azurewebsites.windows.net:443/msdeploy.axd?site=appveyor-test
+  website: appveyor-test
+  username: $appveyor-test
+  password:
+    secure: +yhXWVFWzQdV7MTtDycbwaiBIik4/7vf0YtdBTWcq5tBduCey6TkKMy5v9xSVA1t2hvHFySU7y+bsKD+QRdqSQ==
+  ntlm: false
+  remove_files: true
