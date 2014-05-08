@@ -1,7 +1,12 @@
+environment:
+  my_secure_var:
+    secure: eIGiQCTlb68jxbPoBwujcisGGdwYu+ic1y/MRaGdNEY=
+
 configuration: Release
  
 # restore NuGet packages before running MSBuild
 before_build:
+  - echo %my_secure_var%
   - nuget restore
  
 # package Web Application project for Web Deploy
