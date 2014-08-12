@@ -1,2 +1,2 @@
 ﻿Stop-Website 'MyWebApp'
-Start-Website 'MyWebApp'
+#Start-Website 'MyWebApp'
