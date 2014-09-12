@@ -3,6 +3,9 @@ environment:
   my_secure_var:
     secure: eIGiQCTlb68jxbPoBwujcisGGdwYu+ic1y/MRaGdNEY=
 
+cache:
+  - packages
+
 configuration: Release
  
 # restore NuGet packages before running MSBuild
@@ -15,7 +18,7 @@ build:
   verbosity: minimal
   publish_wap: true
 
-test: off
+#test: off
   
 #deploy:
 #  provider: WebDeploy
