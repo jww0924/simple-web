@@ -7,6 +7,6 @@ $searchPath = [IO.Path]::Combine($projectDir, $filesToAdd)
 
 $itemGroup = '<ItemGroup>' + (Get-ChildItem $searchPath | `
      % { "<Content Include=`"$($_.FullName.Substring($projectDir.Length + 1))`" />" }) + '</ItemGroup>'
-$contents = $contents.Insert($contents.IndexOf('</Project>'), $itemGroup)
+$contents = $contents.Insert($contents.LastIndexOf('</Project>'), $itemGroup)
 
 [IO.File]::WriteAllText($csproj, $contents)
