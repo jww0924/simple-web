@@ -14,6 +14,7 @@ configuration: Release
 before_build:
   - echo %my_secure_var%
   - nuget restore
+  - ps: .\add-project-content.ps1 -csproj MyWebApp\MyWebApp.csproj -filesToAdd 'GeneratedContent\*.*'
  
 # package Web Application project for Web Deploy
 build:
