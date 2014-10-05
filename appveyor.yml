@@ -5,8 +5,8 @@ environment:
   my_secure_var:
     secure: eIGiQCTlb68jxbPoBwujcisGGdwYu+ic1y/MRaGdNEY=
 
-#cache:
-#  - C:\Users\appveyor\AppData\Local\NuGet\Cache
+cache:
+  - C:\Users\appveyor\AppData\Local\NuGet\Cache
 
 configuration: Release
  
