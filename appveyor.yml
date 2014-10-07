@@ -13,7 +13,7 @@ configuration: Release
 # restore NuGet packages before running MSBuild
 before_build:
   - echo %my_secure_var%
-  - nuget restore
+  - nuget restore -Verbosity detailed
   - ps: .\add-project-content.ps1 -csproj MyWebApp\MyWebApp.csproj -filesToAdd 'GeneratedContent\*.*'
  
 # package Web Application project for Web Deploy
