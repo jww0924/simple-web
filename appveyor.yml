@@ -1,7 +1,5 @@
 skip_tags: true
 
-os: test
-
 # bumping new build
 environment:
   my_secure_var:
